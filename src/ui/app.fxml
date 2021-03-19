@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="600.0" minWidth="850.0" style="-fx-background-color: #DEF4FF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AppController">
+    <children>
+        <BorderPane fx:id="mainApp" layoutX="2.0" prefHeight="600.0" prefWidth="850.0">
+            <right>
+                <Pane prefHeight="200.0" prefWidth="60.0" style="-fx-background-color: #80A6B9;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane onMouseClicked="#logoClick" prefHeight="60.0" prefWidth="60.0" styleClass="btn_menu" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="12.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                           <image>
+                              <Image url="@../images/logo_icon.png" />
+                           </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="btn_home" layoutY="163.0" onMouseClicked="#navigateHome" prefHeight="60.0" prefWidth="60.0" styleClass="btn_menu" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="17.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/home_icon.png" />
+                           </image>
+                                </ImageView>
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane fx:id="btn_rooms" layoutY="223.0" onMouseClicked="#navigateRooms" prefHeight="60.0" prefWidth="60.0" styleClass="btn_menu" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/rooms_icon.png" />
+                           </image>
+                                </ImageView>
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane fx:id="btn_users" layoutY="283.0" onMouseClicked="#navigateUsers" prefHeight="60.0" prefWidth="60.0" styleClass="btn_menu" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="13.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/users_icon.png" />
+                           </image>
+                                </ImageView>
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane fx:id="btn_services" layoutY="343.0" onMouseClicked="#navigateServices" prefHeight="60.0" prefWidth="60.0" styleClass="btn_menu" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="12.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/services_icon.png" />
+                           </image>
+                                </ImageView>
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane fx:id="btn_close" layoutY="540.0" onMouseClicked="#logout" prefHeight="60.0" prefWidth="60.0" styleClass="btn_close" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="19.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/exit_icon.png" />
+                           </image>
+                                </ImageView>
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                  <Pane fx:id="btn_tickets" layoutY="403.0" onMouseClicked="#navigateTickets" prefHeight="60.0" prefWidth="60.0" styleClass="btn_menu" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="16.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/invoice_icon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                    </children>
+                </Pane>
+            </right>
+            <center>
+                <Pane fx:id="menu_pane" prefHeight="600.0" prefWidth="790.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="295.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/welcom_img.png" />
+                     </image>
+                        </ImageView>
+                        <GridPane hgap="15.0" layoutX="118.0" layoutY="191.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="346.0" prefWidth="555.0" vgap="15.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#navigateHome" prefHeight="116.0" prefWidth="289.0" styleClass="large_menu_button" stylesheets="@style.css" text="الرئيسية" GridPane.columnIndex="1">
+                                    <graphic>
+                                        <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/home_icon.png" />
+                                 </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font name="Tajawal-Medium" size="18.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                                <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="15.0" layoutX="295.0" layoutY="10.0" mnemonicParsing="false" onAction="#navigateRooms" prefHeight="116.0" prefWidth="289.0" styleClass="large_menu_button" stylesheets="@style.css" text="الغرف">
+                                    <graphic>
+                                        <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/rooms_icon.png" />
+                                 </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font name="Tajawal-Medium" size="18.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                                <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#navigateUsers" prefHeight="116.0" prefWidth="289.0" styleClass="large_menu_button" stylesheets="@style.css" text="المستخدمين" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <graphic>
+                                        <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/users_icon.png" />
+                                 </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font name="Tajawal-Medium" size="18.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                                <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="15.0" layoutX="295.0" layoutY="131.0" mnemonicParsing="false" onAction="#navigateServices" prefHeight="116.0" prefWidth="289.0" styleClass="large_menu_button" stylesheets="@style.css" text="الخدمات" GridPane.rowIndex="1">
+                                    <graphic>
+                                        <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/services_icon.png" />
+                                 </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font name="Tajawal-Medium" size="18.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                                <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="15.0" layoutX="295.0" layoutY="251.0" mnemonicParsing="false" onAction="#logout" prefHeight="116.0" prefWidth="289.0" styleClass="large_menu_button_close" stylesheets="@style.css" text="خروج" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <graphic>
+                                        <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/exit_icon.png" />
+                                 </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font name="Tajawal-Medium" size="18.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                        <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="15.0" layoutX="10.0" layoutY="131.0" mnemonicParsing="false" onAction="#navigateTickets" prefHeight="116.0" prefWidth="289.0" styleClass="large_menu_button" stylesheets="@style.css" text="التذاكر" GridPane.rowIndex="2">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/invoice_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Tajawal-Medium" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                            </children>
+                        </GridPane>
+                    </children>
+                </Pane>
+            </center>
+        </BorderPane>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50;" styleClass="btn_close" stylesheets="@style.css">
+         <children>
+                  <ImageView fitHeight="40.0" fitWidth="41.0" layoutY="2.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../images/exit.png" />
+               </image>
+                  </ImageView>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

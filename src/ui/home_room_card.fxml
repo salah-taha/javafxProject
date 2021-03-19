@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="110.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="14.0" layoutY="10.0" prefHeight="90.0" prefWidth="700.0" style="-fx-background-radius: 10;" styleClass="list_item" stylesheets="@style.css">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="96.0" layoutX="535.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/0b228a104789573.5f6ace380a4c8.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="room_title" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="288.0" layoutY="34.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="236.0" text="جار التحميل" textAlignment="RIGHT">
+               <font>
+                  <Font name="Tajawal" size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="643.0" layoutY="24.0" prefHeight="43.0" prefWidth="43.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #DEF4FF;">
+               <children>
+                  <Label fx:id="room_id" alignment="CENTER" prefHeight="43.0" prefWidth="43.0" text="0" />
+               </children>
+            </Pane>
+            <Button layoutX="25.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="79.0" style="-fx-background-color: #DEF4FF; -fx-background-radius: 20;" text="حجز" textAlignment="CENTER" textFill="#7086ff">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Tajawal ExtraBold" size="15.0" />
+               </font></Button>
+            <Label fx:id="room_type" layoutX="179.0" layoutY="35.0" text="نوع الغرفة" textAlignment="RIGHT">
+               <font>
+                  <Font name="Tajawal" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

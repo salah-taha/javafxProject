@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UsersController">
+   <children>
+      <TabPane layoutX="8.0" layoutY="44.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="537.0" prefWidth="768.0" stylesheets="@style.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+           <Tab text="اضافة / تعديل / حذف">
+              <content>
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                       <ScrollPane layoutX="371.0" layoutY="91.0" prefHeight="374.0" prefWidth="366.0" style="-fx-background-color: #DEF4FF;">
+                          <content>
+                             <VBox fx:id="list_vBox" nodeOrientation="RIGHT_TO_LEFT" prefHeight="392.0" prefWidth="350.0" style="-fx-background-color: #DEF4FF;" />
+                          </content>
+                       </ScrollPane>
+                       <TextField fx:id="search_input" layoutX="370.0" layoutY="48.0" prefHeight="37.0" prefWidth="295.0" promptText="كلمة البحث" styleClass="input">
+                          <font>
+                             <Font name="Tajawal" size="12.0" />
+                          </font></TextField>
+                       <Button layoutX="669.0" layoutY="48.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="69.0" styleClass="btn_menu" stylesheets="@style.css" text="بحث">
+                          <font>
+                             <Font name="Tajawal" size="12.0" />
+                          </font></Button>
+                       <HBox layoutX="368.0" layoutY="8.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="372.0" spacing="15.0">
+                          <children>
+                             <Label text="نوع البحث :">
+                                <font>
+                                   <Font name="Tajawal" size="12.0" />
+                                </font></Label>
+                             <RadioButton fx:id="user_title" mnemonicParsing="false" text="اسم المستخدم">
+                                <toggleGroup>
+                                   <ToggleGroup fx:id="searchType" />
+                                </toggleGroup>
+                                <font>
+                                   <Font name="Tajawal" size="12.0" />
+                                </font></RadioButton>
+                             <RadioButton mnemonicParsing="false" text="رقم المستخدم" toggleGroup="$searchType">
+                                <font>
+                                   <Font name="Tajawal" size="12.0" />
+                                </font></RadioButton>
+                          </children>
+                       </HBox>
+                       <TextField fx:id="name" layoutX="14.0" layoutY="107.0" prefHeight="37.0" prefWidth="323.0" styleClass="input" />
+                       <Label layoutX="14.0" layoutY="82.0" prefHeight="22.0" prefWidth="116.0" text="اسم المستخدم">
+                          <font>
+                             <Font name="Tajawal" size="15.0" />
+                          </font>
+                       </Label>
+                       <Label layoutX="14.0" layoutY="317.0" prefHeight="22.0" prefWidth="114.0" text="نوع المستخدم">
+                          <font>
+                             <Font name="Tajawal" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField fx:id="id" layoutX="14.0" layoutY="35.0" prefHeight="37.0" prefWidth="323.0" styleClass="input" />
+                       <Label layoutX="14.0" layoutY="10.0" prefHeight="22.0" prefWidth="106.0" text="رقم المستخدم">
+                          <font>
+                             <Font name="Tajawal" size="15.0" />
+                          </font>
+                       </Label>
+                       <Label layoutX="14.0" layoutY="157.0" prefHeight="22.0" prefWidth="113.0" text="البريد الالكتروني">
+                          <font>
+                             <Font name="Tajawal" size="15.0" />
+                          </font>
+                       </Label>
+                       <TextField fx:id="email" alignment="CENTER" layoutX="14.0" layoutY="184.0" prefHeight="37.0" prefWidth="323.0" styleClass="input" stylesheets="@style.css" />
+                       <Button layoutX="13.0" layoutY="400.0" mnemonicParsing="false" onAction="#insertUser" prefHeight="36.0" prefWidth="69.0" styleClass="btn_menu" stylesheets="@style.css" text="حفظ">
+                          <font>
+                             <Font name="Tajawal" size="12.0" />
+                          </font>
+                       </Button>
+                       <ChoiceBox fx:id="type" layoutX="14.0" layoutY="345.0" prefHeight="38.0" prefWidth="321.0" styleClass="input" stylesheets="@style.css" />
+                       <Label fx:id="message" layoutX="93.0" layoutY="409.0" text="تم اضافة الغرفة بنجاح" textFill="#00d338" visible="false">
+                          <font>
+                             <Font name="Tajawal" size="14.0" />
+                          </font>
+                       </Label>
+                        <Label layoutX="15.0" layoutY="237.0" prefHeight="22.0" prefWidth="113.0" text="كلمة السر">
+                           <font>
+                              <Font name="Tajawal" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="password" alignment="CENTER" layoutX="15.0" layoutY="264.0" prefHeight="37.0" prefWidth="323.0" styleClass="input" stylesheets="@style.css" />
+                    </children></AnchorPane>
+              </content>
+           </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

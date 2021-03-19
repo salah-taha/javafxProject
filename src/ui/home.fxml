@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="790.0" style="-fx-background-color: #DEF4FF;">
+         <top>
+            <Pane prefHeight="230.0" prefWidth="790.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="567.0" fitWidth="797.0" layoutX="-3.0" layoutY="-377.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/0b228a104789573.5f6ace380a4c8.jpg" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="22.0" layoutY="173.0" prefHeight="59.0" prefWidth="746.0" style="-fx-background-radius: 60; -fx-border-radius: 60; -fx-background-color: #fff;">
+                     <children>
+                        <Line endX="85.0" endY="11.0" layoutX="16.0" layoutY="33.0" startX="85.0" startY="-13.0" stroke="#009be8" />
+                        <Button fx:id="btn_search" layoutY="2.0" lineSpacing="4.0" mnemonicParsing="false" onAction="#searchRooms" prefHeight="54.0" prefWidth="101.0" style="-fx-background-color: transparent;" text="بحث" underline="true">
+                           <font>
+                              <Font name="Tajawal ExtraBold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Label layoutX="651.0" layoutY="20.0" text="نوع الغرفة">
+                           <font>
+                              <Font name="Tajawal-Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="typeBox" layoutX="451.0" layoutY="10.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="189.0" styleClass="input" stylesheets="@style.css" />
+                        <DatePicker fx:id="dateBox" editable="false" layoutX="173.0" layoutY="11.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" prefWidth="174.0" promptText="تاريخ الحجز" styleClass="input" stylesheets="@style.css" />
+                        <Label layoutX="356.0" layoutY="20.0" text="التاريخ">
+                           <font>
+                              <Font name="Tajawal-Medium" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane style="-fx-background-color: #DEF4FF;" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" layoutX="25.0" layoutY="45.0" pannable="true" prefHeight="308.0" prefWidth="741.0" style="-fx-background-color: #DEF4FF; -fx-border-color: #DEF4FF;">
+                     <content>
+                        <VBox fx:id="list_vBox" maxWidth="740.0" prefHeight="304.0" prefWidth="740.0" style="-fx-background-color: #DEF4FF;" />
+                     </content>
+                  </ScrollPane>
+                  <Label layoutX="684.0" layoutY="14.0" style="-fx-padding: 5;" text="غرف مقترحة">
+                     <font>
+                        <Font name="Tajawal-Medium" size="14.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

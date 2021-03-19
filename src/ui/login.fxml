@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="600.0" minWidth="850.0" style="-fx-background-color: #DEF4FF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AppController">
+    <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 60;" styleClass="btn_close" stylesheets="@style.css" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+              <ImageView fitHeight="44.0" fitWidth="41.0" layoutY="2.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                  <viewport>
+                      <Rectangle2D minX="30.0" minY="60.0" />
+                  </viewport>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+               <image>
+                  <Image url="@../images/exit.png" />
+               </image>
+              </ImageView>
+         </children>
+      </Pane>
+        <Pane layoutX="314.0" layoutY="144.0" prefHeight="313.0" prefWidth="222.0">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="11.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/welcom_img.png" />
+               </image>
+                </ImageView>
+                <Button fx:id="btn_login" layoutX="63.0" layoutY="254.0" mnemonicParsing="false" onAction="#login" styleClass="btn_menu" stylesheets="@style.css" text="تسجيل الدخول" textFill="WHITE">
+               <font>
+                  <Font name="Tajawal ExtraBold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <PasswordField fx:id="password" alignment="CENTER_RIGHT" layoutX="37.0" layoutY="194.0" prefHeight="26.0" prefWidth="149.0" promptText="كلمة السر">
+               <font>
+                  <Font name="Tajawal" size="12.0" />
+               </font></PasswordField>
+                <TextField fx:id="username" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="37.0" layoutY="162.0" prefHeight="26.0" prefWidth="149.0" promptText="اسم المستخدم">
+               <font>
+                  <Font name="Tajawal" size="12.0" />
+               </font></TextField>
+            <Label fx:id="error_message" layoutX="14.0" layoutY="229.0" text="يوجد خطأ باسم المستخدم أو كلمة السر" textFill="RED" visible="false">
+               <font>
+                  <Font name="Tajawal" size="12.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+.btn_close:hover{
+    -fx-background-color: red;
+}
+
+.btn_close{
+    -fx-background-color:  #80A6B9;
+
+}
+
+.btn_menu{
+    -fx-background-color:  #80A6B9;
+}
+
+.btn_menu:hover{
+    -fx-background-color:  #366278;
+}
+
+.btn_menu_selected{
+    -fx-background-color: #12374A;
+
+}
+
+.btn_menu_selected:hover{
+    -fx-background-color: #366278;
+
+}
+
+.large_menu_button{
+    -fx-border-radius:25;
+    -fx-background-radius:25;
+    -fx-background-color: #80A6B9;
+    -fx-text-fill: #fff;
+}
+
+.large_menu_button:hover{
+    -fx-background-color: #009BE8;
+}
+
+.large_menu_button_close{
+   -fx-border-radius:25;
+   -fx-background-radius:25;
+   -fx-background-color: #80A6B9;
+   -fx-text-fill: #fff;
+}
+
+.large_menu_button_close:hover{
+    -fx-background-color: red;
+}
+
+.splash_back{
+    -fx-background-color: #DEF4FF;
+}
+
+.splash_back:hover{
+    -fx-background-color: #BBEAFF;
+}
+
+.list_item{
+    -fx-background-color: transparent;
+}
+
+.list_item:hover{
+    -fx-background-color: #fff;
+}
+
+.input{
+    -fx-border-color: #009BE8;
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-color:   #80A6B9;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #fff;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #000;
+}
+
+.tab:selected {
+    -fx-text-fill: #000;
+    -fx-background-color: #DEF4FF;
+}
+
